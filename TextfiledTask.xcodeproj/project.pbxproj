@@ -15,7 +15,8 @@
 		CA61D2242654F711009BE726 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA61D2222654F711009BE726 /* LaunchScreen.storyboard */; };
 		CA61D22D2654FC88009BE726 /* AttributeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61D22B2654FC88009BE726 /* AttributeView.swift */; };
 		CA61D22E2654FC88009BE726 /* AttributeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA61D22C2654FC88009BE726 /* AttributeView.xib */; };
-		CA61D23126550958009BE726 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61D23026550958009BE726 /* NewViewController.swift */; };
+		CA61D234265642B6009BE726 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA61D232265642B6009BE726 /* LabelView.swift */; };
+		CA61D235265642B6009BE726 /* LabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA61D233265642B6009BE726 /* LabelView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +30,8 @@
 		CA61D2252654F711009BE726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA61D22B2654FC88009BE726 /* AttributeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeView.swift; sourceTree = "<group>"; };
 		CA61D22C2654FC88009BE726 /* AttributeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributeView.xib; sourceTree = "<group>"; };
-		CA61D23026550958009BE726 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		CA61D232265642B6009BE726 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		CA61D233265642B6009BE726 /* LabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,24 +66,17 @@
 			children = (
 				CA61D2172654F707009BE726 /* AppDelegate.swift */,
 				CA61D2192654F707009BE726 /* SceneDelegate.swift */,
-				CA61D22F265507ED009BE726 /* New Group */,
+				CA61D21B2654F707009BE726 /* ViewController.swift */,
 				CA61D21D2654F708009BE726 /* Main.storyboard */,
-				CA61D23026550958009BE726 /* NewViewController.swift */,
+				CA61D22B2654FC88009BE726 /* AttributeView.swift */,
+				CA61D22C2654FC88009BE726 /* AttributeView.xib */,
+				CA61D232265642B6009BE726 /* LabelView.swift */,
+				CA61D233265642B6009BE726 /* LabelView.xib */,
 				CA61D2202654F711009BE726 /* Assets.xcassets */,
 				CA61D2222654F711009BE726 /* LaunchScreen.storyboard */,
 				CA61D2252654F711009BE726 /* Info.plist */,
 			);
 			path = TextfiledTask;
-			sourceTree = "<group>";
-		};
-		CA61D22F265507ED009BE726 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				CA61D21B2654F707009BE726 /* ViewController.swift */,
-				CA61D22B2654FC88009BE726 /* AttributeView.swift */,
-				CA61D22C2654FC88009BE726 /* AttributeView.xib */,
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA61D2242654F711009BE726 /* LaunchScreen.storyboard in Resources */,
+				CA61D235265642B6009BE726 /* LabelView.xib in Resources */,
 				CA61D22E2654FC88009BE726 /* AttributeView.xib in Resources */,
 				CA61D2212654F711009BE726 /* Assets.xcassets in Resources */,
 				CA61D21F2654F708009BE726 /* Main.storyboard in Resources */,
@@ -157,9 +153,9 @@
 			files = (
 				CA61D21C2654F707009BE726 /* ViewController.swift in Sources */,
 				CA61D22D2654FC88009BE726 /* AttributeView.swift in Sources */,
-				CA61D23126550958009BE726 /* NewViewController.swift in Sources */,
 				CA61D2182654F707009BE726 /* AppDelegate.swift in Sources */,
 				CA61D21A2654F707009BE726 /* SceneDelegate.swift in Sources */,
+				CA61D234265642B6009BE726 /* LabelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
