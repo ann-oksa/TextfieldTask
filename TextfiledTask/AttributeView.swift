@@ -13,8 +13,9 @@ protocol AttributeViewDelegate: AnyObject {
 
 class AttributeView: UIView {
     
-    @IBOutlet weak var labelView: LabelView!
     @IBOutlet  var textField: UITextField!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var labelTopConstr: NSLayoutConstraint!
     
     weak var delegate: AttributeViewDelegate?
     private var separatorView: UIView?
@@ -46,25 +47,24 @@ class AttributeView: UIView {
                 
         separatorView = UIView.init(frame: CGRect(x: 20, y: view.frame.size.height - 30, width:  view.frame.size.width - 40, height: 1))
         separatorView?.backgroundColor = .lightGray
+        
+        labelTopConstr.constant = 40
 
         self.addSubview(view)
         self.addSubview(separatorView!)
     }
     
     func setTitles(type: Titles) {
-        labelView.setTitle(type: type)
+        titleLabel.text = type.title
+        titleLabel.textColor = .lightGray
     }
  
     func updateState(isTextFieldChosen: Bool) {
         separatorView?.backgroundColor = isTextFieldChosen ? .black : .lightGray
-        labelView.updateState(isChosen: isTextFieldChosen)
-        update()
+        titleLabel.textColor = isTextFieldChosen ? .black : .lightGray
+        titleLabel.font = isTextFieldChosen ? UIFont.systemFont(ofSize: 17) : UIFont.systemFont(ofSize: 14)
+        labelTopConstr.constant = isTextFieldChosen ? 5 : 40
     }
-    
-    func update() {
-        UIView.animate(withDuration: 0.2) {
-            self.labelView.layoutIfNeeded()
-        }
-    }
+
 
 }

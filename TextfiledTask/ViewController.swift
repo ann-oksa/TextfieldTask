@@ -33,16 +33,26 @@ class ViewController: UIViewController {
     func setTitleForTF(tf: UITextField) {
         if tf == loginView.textField {
             loginView.updateState(isTextFieldChosen: true)
+            update()
         } else {
             passwordView.updateState(isTextFieldChosen: true)
+            update()
         }
     }
     
    func removeTitleFromTF(tf: UITextField) {
         if tf == loginView.textField {
             loginView.updateState(isTextFieldChosen: false)
+            update()
         } else {
             passwordView.updateState(isTextFieldChosen: false)
+            update()
+        }
+    }
+    
+    func update() {
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutIfNeeded()
         }
     }
 }
@@ -59,31 +69,33 @@ extension ViewController: AttributeViewDelegate, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let tf = activeTextField else { return }
         removeTitleFromTF(tf: tf)
+        print(textField.text)
+        textField.text = ""
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let text = loginView.textField.text else { return false }
-            let newString = (text as NSString).replacingCharacters(in: range, with: string)
-            textField.text = format(with: "+XX (XXX) XXX-XX-XX", phone: newString)
-            return false
-    }
-    
-    func format(with mask: String, phone: String) -> String {
-        let numbers = phone.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
-        var result = ""
-        var index = numbers.startIndex
-
-        for ch in mask where index < numbers.endIndex {
-            if ch == "X" {
-                result.append(numbers[index])
-                index = numbers.index(after: index)
-
-            } else {
-                result.append(ch)
-            }
-        }
-        return result
-    }
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        guard let text = loginView.textField.text else { return false }
+//            let newString = (text as NSString).replacingCharacters(in: range, with: string)
+//            textField.text = format(with: "+XX (XXX) XXX-XX-XX", phone: newString)
+//            return false
+//    }
+//
+//    func format(with mask: String, phone: String) -> String {
+//        let numbers = phone.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+//        var result = ""
+//        var index = numbers.startIndex
+//
+//        for ch in mask where index < numbers.endIndex {
+//            if ch == "X" {
+//                result.append(numbers[index])
+//                index = numbers.index(after: index)
+//
+//            } else {
+//                result.append(ch)
+//            }
+//        }
+//        return result
+//    }
     
 }
 
