@@ -45,7 +45,7 @@ class AttributeView: UIView {
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.frame = CGRect(origin: CGPoint.zero, size: self.frame.size)
                 
-        separatorView = UIView.init(frame: CGRect(x: 20, y: view.frame.size.height - 30, width:  view.frame.size.width - 40, height: 1))
+        separatorView = UIView.init(frame: CGRect(x: 20, y: view.frame.size.height - 30, width:  UIScreen.main.bounds.width - 40, height: 1))
         separatorView?.backgroundColor = .lightGray
         
         labelTopConstr.constant = 40
@@ -61,8 +61,8 @@ class AttributeView: UIView {
  
     func updateState(isTextFieldChosen: Bool) {
         separatorView?.backgroundColor = isTextFieldChosen ? .black : .lightGray
-        titleLabel.textColor = isTextFieldChosen ? .black : .lightGray
-        titleLabel.font = isTextFieldChosen ? UIFont.systemFont(ofSize: 17) : UIFont.systemFont(ofSize: 14)
+        titleLabel.textColor = isTextFieldChosen ? .label : .lightGray
+        titleLabel.font = isTextFieldChosen ? UIFont.systemFont(ofSize: 16) : UIFont.systemFont(ofSize: 13)
         labelTopConstr.constant = isTextFieldChosen ? 5 : 40
     }
 

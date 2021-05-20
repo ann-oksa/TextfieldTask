@@ -45,11 +45,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WsI-OL-AXS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" identifier="id18" id="3SO-8v-yot"/>
+                            <constraint firstItem="WsI-OL-AXS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" identifier="id18" id="3SO-8v-yot"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4cK-9v-RGo" secondAttribute="trailing" constant="270" identifier="id14" id="AmV-Hu-VDc"/>
                             <constraint firstItem="4cK-9v-RGo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" identifier="id16" id="F6k-ic-HFB"/>
                             <constraint firstItem="WsI-OL-AXS" firstAttribute="top" secondItem="4cK-9v-RGo" secondAttribute="bottom" constant="64" identifier="id19" id="N2B-sd-2w0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WsI-OL-AXS" secondAttribute="trailing" identifier="id15" id="gvB-dN-wzK"/>
+                            <constraint firstAttribute="trailing" secondItem="WsI-OL-AXS" secondAttribute="trailing" identifier="id15" id="gvB-dN-wzK"/>
                             <constraint firstItem="4cK-9v-RGo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" identifier="id17" id="qpP-cY-zZU"/>
                         </constraints>
                     </view>
