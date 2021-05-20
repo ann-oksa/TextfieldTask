@@ -68,3 +68,17 @@ class AttributeView: UIView {
 
 
 }
+enum Titles {
+    case login
+    case password
+    
+    var title: String {
+        switch self {
+        case .login:
+            return "Логин или email"
+        case .password:
+            return "Пароль"
+        }
+    }
+    
+}
